@@ -1,0 +1,5 @@
+FROM mono:5.18.1 as build
+WORKDIR /src
+COPY . .
+WORKDIR /src
+RUN msbuild /restore /p:RestoreConfigFile=NuGet.config /p:TargetPlatform=Mono

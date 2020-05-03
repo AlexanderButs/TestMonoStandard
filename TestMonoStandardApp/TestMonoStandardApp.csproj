@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\TestMonoStandard\TestMonoStandard.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(TargetPlatform)' == 'Mono' ">
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net472</TargetFrameworks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetPlatform)' == 'NetCore' ">
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>netcoreapp3.0</TargetFrameworks>
+  </PropertyGroup>
+
+</Project>

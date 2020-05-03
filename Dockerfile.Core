@@ -1,0 +1,6 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 as build
+WORKDIR /src
+COPY . .
+WORKDIR /src
+RUN dotnet build --configfile NuGet.config -p:TargetPlatform=NetCore
+# RUN dotnet build -p:TargetPlatform=NetCore
